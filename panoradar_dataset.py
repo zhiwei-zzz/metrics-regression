@@ -65,8 +65,6 @@ class PanoRadarDataset(torch.utils.data.Dataset):
         lidar_data = np.load(lidar_npy_name).squeeze().transpose(1, 0)     # [64, 512]
         glass_data = np.load(glass_npy_name).squeeze().transpose(1, 0)     # [64, 512]
 
-        print(rf_data.shape, lidar_data.shape, glass_data.shape)
-
         return rf_data, lidar_data, glass_data
     
 
